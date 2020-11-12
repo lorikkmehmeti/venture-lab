@@ -90,6 +90,12 @@
     transition: all 200ms ease;
     background-image: var(--bg);
     // background-size: cover;
+
+    @media only screen and (max-width: 748px) { 
+        & {
+            display: none;
+        }
+    }
 }
 
 .lab\:hero-section {
@@ -110,7 +116,7 @@
 .lab\:hero-header {
     font-variation-settings: 'wght' 900;
     text-transform: uppercase;
-    font-size: 5rem;
+    @include fluid('font-size', 300px, 1800px, 30px, 100px);
     line-height: 90%;
     max-width: 750px;
     @extend %gradient-text;
@@ -121,15 +127,23 @@
     &::after {
         content: attr(data-title);
         position: absolute;
+        // max-width: 730px;
         top: -5px;
         left: -10px;
         right: 0;
         bottom: 0;
-        font-size: 5rem;
+        @include fluid('font-size', 300px, 1800px, 30px, 100px);
+        // font-size: clamp(2rem, 5rem, 8rem);
         line-height: 90%;
         z-index: -1;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: rgba(#FFBE69, .15);
+
+        @media only screen and (max-width: 900px) {
+            & {
+                display: none;
+            }
+        }
     }
 }
 .lab\:desc {
@@ -180,7 +194,7 @@
 
 .lab\:section {
     width: 100%;
-    margin-top: 0;
+    margin: 60px auto;
     position: relative;
 
     @media only screen and (min-width: 1104px) {
@@ -193,14 +207,14 @@
             border-bottom-left-radius: 16px;
         }
     }
+}
 
-    .content\:section {
-        padding: 0 15px;
-        @media only screen and (min-width: 1104px) {
-            & {
-                width: 1054px;
-                margin: 0 auto;
-            }
+.content\:section {
+    padding: 0 15px;
+    @media only screen and (min-width: 1104px) {
+        & {
+            width: 1054px;
+            margin: 0 auto;
         }
     }
 }
@@ -250,6 +264,23 @@
     grid-template-columns: repeat(4, 1fr);
     grid-row-gap: 15px;
     grid-column-gap: 30px;
+
+    @media only screen and (max-width: 960px) {
+        & {
+            padding: 0 20px;
+            grid-row-gap: 25px;
+            grid-column-gap: 50px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        & {
+            padding: 0 20px;
+            grid-row-gap: 25px;
+            grid-column-gap: 50px;
+            grid-template-columns: 1fr;
+        }
+    }
 }
 
 .\:point {
@@ -341,5 +372,10 @@
     color: var(--text-color);
     line-height: 150%;
     color: var(--text-color);
+}
+
+.title\:section {
+    font-size: 3rem;
+    font-variation-settings: 'wght' 600;
 }
 
