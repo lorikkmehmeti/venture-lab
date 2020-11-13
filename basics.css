@@ -36,7 +36,7 @@ html {
   --success: #2ABC7A;
   --success-rgb: 42, 188, 122;
   --purple-rgb: 136, 85, 255;
-  --height-after-moving: calc(var(--header-size) + 20px);
+  --height-after-moving: calc(var(--header-size) + 5px);
   --shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='295px' height='51px' viewBox='0 0 295 51' version='1.1'%3E%3Cg id='Landing-Page-2' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' fill-opacity='0.2'%3E%3Cg id='Landing-Page-Copy-15' transform='translate(-127.000000, -379.000000)' fill='rgba(136, 85, 255,1)'%3E%3Cg id='Group-3-Copy' transform='translate(127.000000, 247.000000)'%3E%3Cg id='Group-43'%3E%3Cpath d='M0.579356489,136.93126 C46.5371131,135.904485 89.3903171,135.260732 129.138969,135 C168.88762,134.739268 222.674631,133.739268 290.5,132 L295,183 C231.01242,181.524817 180.396035,180.787226 143.150845,180.787226 C105.905655,180.787226 58.3818252,181.524817 0.579356489,183 L0.579356489,136.93126 Z' id='Rectangle'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 

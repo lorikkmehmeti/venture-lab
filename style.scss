@@ -164,7 +164,6 @@
     border-radius: 6px;
     font-size: 14px;
     cursor: pointer;
-    transform: scale(.9);
     color: var(--bg-page)!important;
 }
 
@@ -468,6 +467,14 @@ sup {
 
     img {
         width: 40px;
+    }
+}
+
+.mobile-hide{
+    @media only screen and (max-width: 768px) {
+        & {
+            display: none;
+        }
     }
 }
 

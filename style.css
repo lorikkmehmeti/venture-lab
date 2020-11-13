@@ -353,8 +353,6 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   border-radius: 6px;
   font-size: 14px;
   cursor: pointer;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
   color: var(--bg-page) !important;
 }
 
@@ -709,5 +707,11 @@ sup {
 
 .flag\:container img {
   width: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobile-hide {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
