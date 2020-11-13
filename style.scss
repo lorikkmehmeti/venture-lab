@@ -264,6 +264,8 @@
     margin-top: 30px;
     max-width: 900px;
     line-height: 150%;
+    @include fluid('font-size', 320px, 1800px, 13px, 15px);
+    user-select: text;
 }
 
 .points\:section {
@@ -481,10 +483,74 @@ sup {
 }
 
 .mobile-hide{
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 600px) {
         & {
             display: none;
         }
+    }
+}
+
+body {
+    position: relative;
+}
+
+#menu-toggle:checked {
+    & ~ .lab\:menu-mobile {
+        display: block;
+    }
+
+    & ~ header nav label {
+        path {
+            d: path('M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z')!important;
+        }
+    }
+}
+
+.menu\:toggle {
+    --menu-size: 38px;
+    --menu-svg-size: 26px;
+    position: absolute;
+    top: 50%;
+    width: var(--menu-size);
+    height: var(--menu-size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+
+    svg {
+        width: var(--menu-svg-size);
+        height: var(--menu-svg-size);
+    }
+    right: 20px;
+    transform: translateY(-50%);
+
+    &:focus {
+        box-shadow: 0 0 0 1px solid var(--orange);
+    }
+
+    &:active, &:focus {
+        background: rgba(255,255,255, .1);
+    }
+}
+
+.lab\:menu-mobile {
+    position: fixed;
+    top: var(--height-after-moving);
+    left: 0;
+    right: 0;
+    padding: 30px;
+    width: 100%;
+    min-height: 200px;
+    background: rgba(var(--bg-page-rgb), .9);
+    backdrop-filter: blur(20px);
+    z-index: 14;
+    display: none;
+}
+
+@media only screen and (min-width: 601px) {
+    .lab\:menu-mobile, .menu\:toggle { 
+        display: none;
     }
 }
 
