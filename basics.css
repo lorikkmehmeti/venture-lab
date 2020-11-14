@@ -68,6 +68,7 @@ body,
 body html {
   margin: 0;
   padding: 0;
+  overflow-x: hidden !important;
 }
 
 .hide {
@@ -134,6 +135,84 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   100% {
     -webkit-box-shadow: 0 0 0 0rgba(var(--purple-rgb), 0);
             box-shadow: 0 0 0 0rgba(var(--purple-rgb), 0);
+  }
+}
+
+@media (hover: hover) {
+  .cursor {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    border-radius: 50%;
+    background: transparent;
+    pointer-events: none;
+    z-index: 111;
+    border: 1px solid var(--orange);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-animation: moveCursor1 .5s infinite alternate;
+            animation: moveCursor1 .5s infinite alternate;
+  }
+  .expand {
+    background: transparent;
+    -webkit-animation: moveCursor2 .5s forwards;
+            animation: moveCursor2 .5s forwards;
+    border: 1px solid var(--orange);
+  }
+  @-webkit-keyframes moveCursor1 {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    to {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
+  }
+  @keyframes moveCursor1 {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    to {
+      -webkit-transform: scale(0.8);
+              transform: scale(0.8);
+    }
+  }
+  @-webkit-keyframes moveCursor2 {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0;
+    }
+  }
+  @keyframes moveCursor2 {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 0;
+    }
   }
 }
 /*# sourceMappingURL=basics.css.map */
