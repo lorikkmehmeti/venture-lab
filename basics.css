@@ -31,7 +31,6 @@ html {
   --g-yellow: linear-gradient(30deg, #fc0, #fc0);
   --g-red: linear-gradient(30deg, #f36, #f24);
   --g-blue: linear-gradient(30deg, #0cf, #0af);
-  --g-purple: linear-gradient(30deg, #85f, #9966ff);
   --header-size: 55px;
   --success: #2ABC7A;
   --success-rgb: 42, 188, 122;

@@ -554,3 +554,89 @@ body {
     }
 }
 
+.section\:flex {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    margin-left: -0.625rem;
+    margin-right: -0.625rem;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+.interview\:image{
+    flex: 0 1 auto;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    background: var(--bg-page);
+    @media only screen and (min-width: 768px) {
+        & {
+            width: 50%;
+         }
+    }
+
+    img {
+        mix-blend-mode: color-dodge;
+        max-width: 100%;
+    }
+}
+
+.text\:interview {
+    flex: 0 1 auto;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    width: 100%;
+    @media only screen and (min-width: 768px) {
+        & {
+            width: 41.6667%;
+        }
+    }
+
+    &-title {
+        @include fluid('font-size', 320px, 1800px, 30px, 56px);
+        font-variation-settings: 'wght' 700;
+        font-weight: 700;
+        line-height: 100%;
+   
+        span {
+            position: relative;
+            // @extend %gradient-text;
+            color: #8855ff;
+            @include fluid('font-size', 320px, 1800px, 30px, 56px);
+            font-variation-settings: 'wght' 900;
+
+            svg {
+                fill: #8855ff;
+                position: absolute;
+                bottom: -2px;
+                width: 100%;
+                height: 10px;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.section\:container {
+    width: 100%;
+    max-width: 75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin: 0 auto 20px;  
+
+    @media only screen and (min-width: 1200px){
+        & {
+            padding-left: 0.625rem;
+            padding-right: 0.625rem;
+        }
+    }
+}
