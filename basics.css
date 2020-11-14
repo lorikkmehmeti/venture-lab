@@ -27,6 +27,7 @@ html {
   --blue-active: #217ef9;
   --yellow: #fc0;
   --orange: #F48A16;
+  --orange-rgb: 244, 138, 22;
   --g-purple: linear-gradient(30deg, #85f, #9966ff);
   --g-yellow: linear-gradient(30deg, #fc0, #fc0);
   --g-red: linear-gradient(30deg, #f36, #f24);
@@ -45,16 +46,24 @@ html {
   font-family: "Inter var", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
 
 *:focus {
   outline: none;
+}
+
+*::-moz-selection {
+  background: rgba(var(--orange-rgb), 0.7) !important;
+}
+
+*::selection {
+  background: rgba(var(--orange-rgb), 0.7) !important;
 }
 
 body {

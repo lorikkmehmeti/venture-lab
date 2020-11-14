@@ -27,6 +27,7 @@ html {
   --blue-active: #217ef9;
   --yellow: #fc0;
   --orange: #F48A16;
+  --orange-rgb: 244, 138, 22;
   --g-purple: linear-gradient(30deg, #85f, #9966ff);
   --g-yellow: linear-gradient(30deg, #fc0, #fc0);
   --g-red: linear-gradient(30deg, #f36, #f24);
@@ -45,16 +46,24 @@ html {
   font-family: "Inter var", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
   -webkit-transition: all 200ms ease;
   transition: all 200ms ease;
 }
 
 *:focus {
   outline: none;
+}
+
+*::-moz-selection {
+  background: rgba(var(--orange-rgb), 0.7) !important;
+}
+
+*::selection {
+  background: rgba(var(--orange-rgb), 0.7) !important;
 }
 
 body {
@@ -290,6 +299,10 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.02em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-weight: 400;
 }
 
@@ -300,6 +313,10 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .lab\:menu li a {
@@ -315,6 +332,10 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   -webkit-transition: 0.2s color;
   transition: 0.2s color;
   font-variation-settings: 'wght' 600;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-weight: 600;
 }
 
@@ -361,6 +382,10 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   background-image: linear-gradient(135deg, #FFBE69 10%, #F48A16 100%);
   color: var(--text-color);
   position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .lab\:hero-header {
@@ -427,6 +452,10 @@ h1.sentry\:link, h2.sentry\:link, h3.sentry\:link, h4.sentry\:link, h5.sentry\:l
   color: var(--bg-page);
   border: 1px solid transparent;
   padding: 8px 12px !important;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   font-variation-settings: 'wght' 500;
   border-radius: 6px;
   font-size: 14px;
@@ -838,13 +867,13 @@ sup {
 
 @media screen and (min-width: 700px) {
   .desc\:wrapper {
-    margin-left: calc(0px + 120 * ((100vw - 700px) / 1100)) !important;
+    margin-left: calc(0px + 60 * ((100vw - 700px) / 1100)) !important;
   }
 }
 
 @media screen and (min-width: 1800px) {
   .desc\:wrapper {
-    margin-left: 120px !important;
+    margin-left: 60px !important;
   }
 }
 
